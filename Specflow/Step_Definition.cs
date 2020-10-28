@@ -1,4 +1,5 @@
-﻿using Common.Service;
+﻿using Common;
+using Common.Service;
 using Models;
 using NUnit.Framework;
 using RestSharp;
@@ -23,7 +24,7 @@ namespace Specflow
         {
             //The first step has been done for you.
             var eService = new EmployeeService();
-            _employees = eService.CreateEmployee(table);          
+            _employees = eService.CreateEmployee(table);
         }
 
         [When(@"I post employee to the api")]
